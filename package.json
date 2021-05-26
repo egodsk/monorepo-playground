@@ -1,0 +1,14 @@
+{
+  "name": "base",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "version": "lerna version --no-push --exact --no-git-tag-version",
+    "watch": "[[ -z \"${npm_config_scopes}\" ]] && echo \"Mising '--scopes=...' argument. E.g. npm run watch --scopes=foo,bar\"; exit || npm run build -- --include-dependencies --scope=@test/'{$npm_config_scopes}' && echo $npm_config_scopes && lerna run watch --parallel --stream --include-dependencies --scope=@test/{$npm_config_scopes}"
+  },
+  "devDependencies": {
+    "lerna": "4.0.0"
+  }
+}

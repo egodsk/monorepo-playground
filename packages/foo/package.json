@@ -1,0 +1,23 @@
+{
+  "name": "@test/foo",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf -rf ./dist",
+    "compile": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "rimraf": "~3.0.2",
+    "ts-loader": "^9.2.2",
+    "typescript": "~4.2.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}

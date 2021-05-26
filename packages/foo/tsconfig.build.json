@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "allowJs": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
